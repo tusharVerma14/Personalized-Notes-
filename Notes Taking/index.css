@@ -1,0 +1,16 @@
+body {
+    background-image: url("gradient-stripes-multi-colors.jpg");
+    /* background-color:rgba(0,0,0,0.7); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .textchange {
+    color: whitesmoke;
+  }
+  footer{
+    position: relative;
+    bottom:0;
+  }
+  

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>hey everyone
+    <button class="btn btn"><img src="img_416864.png" height="20px" alt=""></button>
+</span>
+    <script>
+        // {
+        //    for better understansding
+        //    in html <input type="text" value="">
+        //    let inpt=document.getElementsByTagName('input');
+        //    console.log(inpt[0].value);
+        // }
+        let div=document.createElement('div');
+        div.innerText="Double Click On me To Write Text";
+        document.body.appendChild(div);
+
+        div.addEventListener('mouseover',()=>{
+            div.style.fontSize="150%";
+        })
+        div.addEventListener('mouseout',()=>{
+            div.style.fontSize="100%";
+        })
+        let inp=document.createElement('input');
+        inp.setAttribute("value","");
+        div.addEventListener('dblclick',()=>{
+            div.replaceWith(inp);
+        })
+        inp.addEventListener('blur',()=>{
+           
+            // localStorage.setItem('Edited',JSON.stringify(inp.value));
+            localStorage.setItem('Edited',inp.value);
+        })
+        
+
+        
+// bottom code from utube
+// //I add a new highLighting text feature on the text.
+// // Creating a new Div element
+// let div = document.createElement('div');
+// div.setAttribute("id","edit")
+// div.innerText = "Double Click on me to Edit";
+
+// // It will increase the text size when mouseover on it.
+// div.addEventListener('mouseover',function(){
+//     div.style.fontSize = '150%'
+// })
+
+// // Appending the element to the body
+// document.body.appendChild(div)
+
+// // Creating the editable element
+// //Whenever someone double click on the text it will turn to editable.
+// let inpt = document.createElement('input');
+// inpt.setAttribute("value","") 
+// document.getElementById('edit').addEventListener('dblclick',function(){
+//     div.replaceWith(inpt)
+// });
+
+// // Click outside to save the text into local storage as (Edited) name.
+// inpt.addEventListener('blur',function(){
+//     localStorage.setItem('Edited',JSON.stringify(inpt.value))
+// })
+
+
+
+    </script>
+</body>
+</html>
